@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.android.databinding'
 
 android {
-    compileSdkVersion 22
+    compileSdkVersion 'android-MNC'
     buildToolsVersion "23.0.0 rc3"
 
     defaultConfig {
         applicationId "com.fasteque.androiddatabindingsample"
         minSdkVersion 21
-        targetSdkVersion 22
+        targetSdkVersion 'MNC'
         versionCode 1
         versionName "1.0"
     }
