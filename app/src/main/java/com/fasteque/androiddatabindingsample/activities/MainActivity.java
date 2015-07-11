@@ -1,15 +1,14 @@
 package com.fasteque.androiddatabindingsample.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.fasteque.androiddatabindingsample.R;
 
@@ -18,9 +17,7 @@ import com.fasteque.androiddatabindingsample.R;
  */
 public class MainActivity extends AppCompatActivity {
 
-    private Toolbar toolbar;
     private DrawerLayout drawerLayout;
-    private View content;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +26,10 @@ public class MainActivity extends AppCompatActivity {
 
         initToolbar();
         setupDrawerLayout();
-        content = findViewById(R.id.content_frame);
     }
 
     private void initToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         final ActionBar actionBar = getSupportActionBar();
 
@@ -50,10 +46,10 @@ public class MainActivity extends AppCompatActivity {
         NavigationView view = (NavigationView) findViewById(R.id.navigation_view);
         view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override public boolean onNavigationItemSelected(MenuItem menuItem) {
-                Snackbar.make(content, menuItem.getTitle() + " use case", Snackbar.LENGTH_LONG).show();
-                toolbar.setTitle(menuItem.getTitle());
                 menuItem.setChecked(true);
                 drawerLayout.closeDrawers();
+                startBindingUseCase(menuItem);
+
                 return true;
             }
         });
@@ -68,5 +64,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void startBindingUseCase(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.drawer_simple:
+                startActivity(new Intent(MainActivity.this, SimpleBindingActivity.class));
+                break;
+        }
     }
 }
