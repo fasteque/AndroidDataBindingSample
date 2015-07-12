@@ -15,6 +15,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.SimpleBindingActivity"/>
+        <activity android:name=".activities.ObservableBindingActivity"/>
 
     </application>
 
