@@ -71,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.drawer_simple:
                 startActivity(new Intent(MainActivity.this, SimpleBindingActivity.class));
                 break;
+            case R.id.drawer_observable:
+                startActivity(new Intent(MainActivity.this, ObservableBindingActivity.class));
+                break;
+            case R.id.drawer_recycler:
+                startActivity(new Intent(MainActivity.this, RecyclerViewBindingActivity.class));
+                break;
         }
     }
 }
