@@ -3,6 +3,7 @@ package com.fasteque.androiddatabindingsample.activities;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.view.MenuItem;
 
 import com.fasteque.androiddatabindingsample.R;
 import com.fasteque.androiddatabindingsample.databinding.ActivitySimpleBindingBinding;
@@ -33,7 +34,18 @@ public class SimpleBindingActivity extends BaseActivity {
         final ActionBar actionBar = getSupportActionBar();
 
         if (actionBar != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             actionBar.setTitle(getString(R.string.simple_example));
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
     }
 }
