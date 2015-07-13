@@ -6,7 +6,7 @@ import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
 
 import com.fasteque.androiddatabindingsample.R;
-import com.fasteque.androiddatabindingsample.databinding.ActivitySimpleBindingBinding;
+import com.fasteque.androiddatabindingsample.databinding.SimpleBinding;
 import com.fasteque.androiddatabindingsample.model.User;
 
 /**
@@ -16,7 +16,7 @@ public class SimpleBindingActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivitySimpleBindingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_simple_binding);
+        SimpleBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_simple_binding);
 
         // Create data to bind.
         User user = new User("Daniele", "Altomare");
