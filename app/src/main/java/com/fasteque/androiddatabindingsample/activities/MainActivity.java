@@ -6,8 +6,6 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.fasteque.androiddatabindingsample.R;
@@ -15,7 +13,7 @@ import com.fasteque.androiddatabindingsample.R;
 /**
  * Created by daltomare on 10/07/15.
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private DrawerLayout drawerLayout;
 
@@ -28,11 +26,11 @@ public class MainActivity extends AppCompatActivity {
         setupDrawerLayout();
     }
 
-    private void initToolbar() {
-        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        final ActionBar actionBar = getSupportActionBar();
+    @Override
+    protected void initToolbar() {
+        super.initToolbar();
 
+        final ActionBar actionBar = getSupportActionBar();
 
         if (actionBar != null) {
             actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp);
