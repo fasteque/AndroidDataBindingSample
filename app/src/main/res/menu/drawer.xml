@@ -5,7 +5,6 @@
 
         <item
             android:id="@+id/drawer_simple"
-            android:checked="true"
             android:icon="@drawable/ic_link_black_24dp"
             android:title="@string/simple_example"/>
 
