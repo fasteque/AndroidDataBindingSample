@@ -62,7 +62,7 @@
                     android:text="@string/simple_binding_last_name"/>
 
                 <TextView
-                    android:id="@+id/LastName"
+                    android:id="@+id/lastName"
                     style="@style/TextDynamic"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
