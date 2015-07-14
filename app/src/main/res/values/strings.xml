@@ -6,4 +6,7 @@
     <string name="navigation_header_title">Data Binding samples</string>
     <string name="simple_binding_first_name">First name:</string>
     <string name="simple_binding_last_name">Last name:</string>
+    <string name="observable_binding_movie_title">Title:</string>
+    <string name="observable_binding_movie_genre">Genre:</string>
+    <string name="observable_binding_movie_year">Year:</string>
 </resources>
