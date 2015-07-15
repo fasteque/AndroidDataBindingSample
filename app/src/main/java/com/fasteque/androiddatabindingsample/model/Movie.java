@@ -14,6 +14,12 @@ public class Movie extends BaseObservable {
     private String genre;
     private int year;
 
+    public Movie(String title, String genre, int year) {
+        this.title = title;
+        this.genre = genre;
+        this.year = year;
+    }
+
     @Bindable
     public String getTitle() {
         return title;
