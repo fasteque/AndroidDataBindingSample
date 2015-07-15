@@ -9,4 +9,5 @@
     <string name="observable_binding_movie_title">Title:</string>
     <string name="observable_binding_movie_genre">Genre:</string>
     <string name="observable_binding_movie_year">Year:</string>
+    <string name="observable_binding_get_movie_button">Get movie</string>
 </resources>
