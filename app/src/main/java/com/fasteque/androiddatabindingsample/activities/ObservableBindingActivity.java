@@ -13,19 +13,28 @@ import com.fasteque.androiddatabindingsample.model.Movie;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by daltomare on 12/07/15.
  */
 public class ObservableBindingActivity extends BaseActivity {
+    private List<Movie> movies = new ArrayList<>();
     private Button getMovieButton;
     private Movie movie;
+    private int currentMovie = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ObservableBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_observable_binding);
-        movie = new Movie("Terminator Genisys", "Sci-Fi", 2015);
+
+        // How we get data is not important is this example.
+        movies.add(new Movie("The Bourne Ultimatum", "Action", 2007));
+        movies.add(new Movie("Monsters University", "Animation", 2013));
+        movies.add(new Movie("Terminator Genisys", "Sci-Fi", 2015));
+
+        movie = movies.get(currentMovie);
         binding.setMovie(movie);
 
         initToolbar();
@@ -65,6 +74,19 @@ public class ObservableBindingActivity extends BaseActivity {
     }
 
     private void dummyGetMovieLogic() {
-        // TODO
+        currentMovie = getNextMovie();
+        movie.setTitle(movies.get(currentMovie).getTitle());
+        movie.setGenre(movies.get(currentMovie).getGenre());
+        movie.setYear(movies.get(currentMovie).getYear());
+    }
+
+    private int getNextMovie() {
+        Random rand = new Random();
+        int nextMovie = rand.nextInt(3);
+        if(currentMovie == nextMovie) {
+            return getNextMovie();
+        } else {
+            return nextMovie;
+        }
     }
 }
