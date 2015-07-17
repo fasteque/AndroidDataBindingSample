@@ -30,7 +30,12 @@ public class ObservableBindingActivity extends BaseActivity {
         ObservableBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_observable_binding);
 
         // How we get data is not important is this example.
+        movies.add(new Movie("The Thomas Crown Affair", "Thriller", 1999));
+        movies.add(new Movie("Lost In Translation", "Drama", 2003));
+        movies.add(new Movie("Elite Squad", "Action", 2007));
+        movies.add(new Movie("Crazy, Stupid, Love", "Comedy", 2011));
         movies.add(new Movie("The Bourne Ultimatum", "Action", 2007));
+        movies.add(new Movie("Delivery Man", "Comedy", 2013));
         movies.add(new Movie("Monsters University", "Animation", 2013));
         movies.add(new Movie("Terminator Genisys", "Sci-Fi", 2015));
 
