@@ -14,6 +14,8 @@ public class RecyclerViewBindingActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recyclerview_binding);
+
+        initToolbar();
     }
 
     @Override
