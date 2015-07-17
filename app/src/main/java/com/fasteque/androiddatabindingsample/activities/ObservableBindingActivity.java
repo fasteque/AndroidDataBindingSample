@@ -86,12 +86,10 @@ public class ObservableBindingActivity extends BaseActivity {
     }
 
     private int getNextMovie() {
-        Random rand = new Random();
-        int nextMovie = rand.nextInt(3);
-        if(currentMovie == nextMovie) {
-            return getNextMovie();
-        } else {
-            return nextMovie;
+        currentMovie++;
+        if(currentMovie == movies.size()) {
+            currentMovie = 0;
         }
+        return  currentMovie;
     }
 }
