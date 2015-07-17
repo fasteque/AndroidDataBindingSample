@@ -19,7 +19,16 @@
             android:id="@+id/context"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_marginTop="?attr/actionBarSize">
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="7dp"
+                android:text="@string/activity_main_text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="italic"/>
         </FrameLayout>
 
         <android.support.design.widget.AppBarLayout

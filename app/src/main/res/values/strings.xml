@@ -10,4 +10,6 @@
     <string name="observable_binding_movie_genre">Genre:</string>
     <string name="observable_binding_movie_year">Year:</string>
     <string name="observable_binding_get_movie_button">Get movie</string>
+    <string name="activity_main_text">This is a simple example of the Android Data Binding library.\nOpen the menu to
+        find out more.</string>
 </resources>
