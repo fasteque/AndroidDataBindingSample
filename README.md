@@ -1,7 +1,9 @@
 AndroidDataBindingSample
 ================
 
-Android Data Binding sample.
+Examples of usage for the [Android Data Binding library](https://developer.android.com/tools/data-binding/guide.html).
+
+The focus is the library itself, thus the code is kept simple without any MVP pattern or dependency injection.
 
 For any comment, feedback or if you would like to help, please write to daniele.altomare@gmail.com.
 
