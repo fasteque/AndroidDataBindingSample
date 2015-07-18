@@ -2,6 +2,8 @@ package com.fasteque.androiddatabindingsample.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 
 import com.fasteque.androiddatabindingsample.R;
@@ -16,6 +18,7 @@ public class RecyclerViewBindingActivity extends BaseActivity {
         setContentView(R.layout.activity_recyclerview_binding);
 
         initToolbar();
+        initRecyclerView();
     }
 
     @Override
@@ -38,5 +41,12 @@ public class RecyclerViewBindingActivity extends BaseActivity {
         } else {
             return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void initRecyclerView() {
+        final RecyclerView recycler = (RecyclerView) this.findViewById(R.id.recycler_view);
+        recycler.setHasFixedSize(true);
+        recycler.setLayoutManager(new LinearLayoutManager(this));
+        // TODO: set adapter
     }
 }
