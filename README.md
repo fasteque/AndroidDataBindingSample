@@ -1,4 +1,4 @@
-AndroidDataBindingSample
+AndroidDataBindingSample [![Build Status](https://travis-ci.org/fasteque/AndroidDataBindingSample.svg?branch=master)](https://travis-ci.org/fasteque/AndroidDataBindingSample)
 ================
 
 Examples of usage for the [Android Data Binding library](https://developer.android.com/tools/data-binding/guide.html).
