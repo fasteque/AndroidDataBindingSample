@@ -7,11 +7,19 @@ import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 
 import com.fasteque.androiddatabindingsample.R;
+import com.fasteque.androiddatabindingsample.adapters.CarAdapter;
+import com.fasteque.androiddatabindingsample.model.Car;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by daltomare on 12/07/15.
  */
 public class RecyclerViewBindingActivity extends BaseActivity {
+
+    private CarAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +55,30 @@ public class RecyclerViewBindingActivity extends BaseActivity {
         final RecyclerView recycler = (RecyclerView) this.findViewById(R.id.recycler_view);
         recycler.setHasFixedSize(true);
         recycler.setLayoutManager(new LinearLayoutManager(this));
-        // TODO: set adapter
+        adapter = new CarAdapter();
+        recycler.setAdapter(adapter);
+        generateData();
+    }
+
+    /**
+     * The focus of the example is the RecyclerView data binding mechanism, so data is simply statically created
+     * without any actual logic.
+     */
+    private void generateData() {
+        List<Car> cars = new ArrayList<>();
+
+        cars.add(new Car("Audi", "R8"));
+        cars.add(new Car("Bmw", "M4"));
+        cars.add(new Car("Bmw", "i8"));
+        cars.add(new Car("Ferrari", "488"));
+        cars.add(new Car("Ferrari", "LaFerrari"));
+        cars.add(new Car("Lamborghini", "Huracan"));
+        cars.add(new Car("Lamborghini", "Aventador"));
+        cars.add(new Car("McLaren", "P1"));
+        cars.add(new Car("Mercedes", "AMG GT"));
+        cars.add(new Car("Nissan", "GTR"));
+        cars.add(new Car("Porsche", "918"));
+
+        adapter.addItems(cars);
     }
 }
