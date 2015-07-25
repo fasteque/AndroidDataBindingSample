@@ -7,11 +7,10 @@ The focus is the Data Binding Library, thus the code is kept simple without any 
 
 For any comment, feedback or if you would like to help, please write to daniele.altomare@gmail.com.
 
-
-
+<br>
 ##### Latest available APK:
 [Release v1.0](https://github.com/fasteque/AndroidDataBindingSample/releases/download/1.0/app-v1.0.apk)
-
+<br><br>
 
 
 License
