@@ -1,5 +1,7 @@
 package com.fasteque.androiddatabindingsample;
 
+import android.support.v7.widget.Toolbar;
+
 import com.fasteque.androiddatabindingsample.activities.ObservableBindingActivity;
 
 import org.junit.Before;
@@ -32,5 +34,11 @@ public class ObservableBindingActivityTest {
     public void titleIsCorrect() throws Exception {
         assertTrue(activity.getSupportActionBar().getTitle().toString().equals(activity.getString(R.string
                 .observable_example)));
+    }
+
+    @Test
+    public void layoutIsCorrect() throws Exception {
+        final Toolbar toolbar = (Toolbar) activity.findViewById(R.id.toolbar);
+        assertNotNull("toolbar is null", toolbar);
     }
 }
