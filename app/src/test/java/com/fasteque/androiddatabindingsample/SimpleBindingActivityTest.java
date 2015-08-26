@@ -9,6 +9,7 @@ import org.robolectric.Robolectric;
 import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(RobolectricGradleTestRunner.class)
@@ -23,8 +24,12 @@ public class SimpleBindingActivityTest {
     }
 
     @Test
+    public void activityIsInstantiated() throws Exception {
+        assertNotNull("activity is null", activity);
+    }
+
+    @Test
     public void titleIsCorrect() throws Exception {
-        System.out.println(activity.getString(R.string.observable_example));
         assertTrue(activity.getSupportActionBar().getTitle().toString().equals(activity.getString(R.string
                 .simple_example)));
     }
