@@ -1,5 +1,6 @@
 package com.fasteque.androiddatabindingsample;
 
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 import com.fasteque.androiddatabindingsample.activities.RecyclerViewBindingActivity;
@@ -40,5 +41,8 @@ public class RecyclerViewBindingActivityTest {
     public void layoutIsCorrect() throws Exception {
         final Toolbar toolbar = (Toolbar) activity.findViewById(R.id.toolbar);
         assertNotNull("toolbar is null", toolbar);
+
+        RecyclerView recyclerView = (RecyclerView) activity.findViewById(R.id.recycler_view);
+        assertNotNull("recycler_view is null", recyclerView);
     }
 }
