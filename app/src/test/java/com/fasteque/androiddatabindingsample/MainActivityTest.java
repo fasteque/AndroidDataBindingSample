@@ -2,6 +2,7 @@ package com.fasteque.androiddatabindingsample;
 
 import android.support.design.widget.NavigationView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import com.fasteque.androiddatabindingsample.activities.MainActivity;
@@ -47,6 +48,7 @@ public class MainActivityTest {
 
         final TextView text = (TextView) activity.findViewById(R.id.context_text);
         assertNotNull("text is null", text);
+        assertTrue(text.getVisibility() == View.VISIBLE);
         assertTrue(text.getText().toString().equals(activity.getString(R.string.activity_main_text)));
     }
 }
