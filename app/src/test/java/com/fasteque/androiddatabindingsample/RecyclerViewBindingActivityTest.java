@@ -2,6 +2,7 @@ package com.fasteque.androiddatabindingsample;
 
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.fasteque.androiddatabindingsample.activities.RecyclerViewBindingActivity;
 
@@ -44,5 +45,6 @@ public class RecyclerViewBindingActivityTest {
 
         RecyclerView recyclerView = (RecyclerView) activity.findViewById(R.id.recycler_view);
         assertNotNull("recycler_view is null", recyclerView);
+        assertTrue(recyclerView.getVisibility() == View.VISIBLE);
     }
 }
