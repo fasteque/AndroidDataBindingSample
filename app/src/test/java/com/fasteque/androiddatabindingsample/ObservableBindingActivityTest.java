@@ -1,6 +1,7 @@
 package com.fasteque.androiddatabindingsample;
 
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -45,14 +46,19 @@ public class ObservableBindingActivityTest {
 
         TextView text = (TextView) activity.findViewById(R.id.movieTitle);
         assertNotNull("movieTitle is null", text);
+        assertTrue(text.getVisibility() == View.VISIBLE);
 
         text = (TextView) activity.findViewById(R.id.movieGenre);
         assertNotNull("movieGenre is null", text);
+        assertTrue(text.getVisibility() == View.VISIBLE);
 
         text = (TextView) activity.findViewById(R.id.movieYear);
         assertNotNull("movieYear is null", text);
+        assertTrue(text.getVisibility() == View.VISIBLE);
 
         final Button button = (Button) activity.findViewById(R.id.get_movie_button);
         assertNotNull("get_movie_button is null", button);
+        assertTrue(button.getVisibility() == View.VISIBLE);
+        assertTrue(button.isEnabled());
     }
 }
