@@ -1,6 +1,7 @@
 package com.fasteque.androiddatabindingsample;
 
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import com.fasteque.androiddatabindingsample.activities.SimpleBindingActivity;
@@ -44,8 +45,10 @@ public class SimpleBindingActivityTest {
 
         TextView text = (TextView) activity.findViewById(R.id.firstName);
         assertNotNull("firstName is null", text);
+        assertTrue(text.getVisibility() == View.VISIBLE);
 
         text = (TextView) activity.findViewById(R.id.lastName);
         assertNotNull("lastName is null", text);
+        assertTrue(text.getVisibility() == View.VISIBLE);
     }
 }
