@@ -13,7 +13,6 @@ import com.fasteque.androiddatabindingsample.model.Movie;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * Created by daltomare on 12/07/15.
