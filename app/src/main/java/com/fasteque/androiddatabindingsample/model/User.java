@@ -1,7 +1,8 @@
 package com.fasteque.androiddatabindingsample.model;
 
 /**
- * Created by daltomare on 08/07/15.
+ * Created by daltomare on 12/07/15.
+ * Project: AndroidDataBindingSample
  */
 public class User {
     private final String firstName;

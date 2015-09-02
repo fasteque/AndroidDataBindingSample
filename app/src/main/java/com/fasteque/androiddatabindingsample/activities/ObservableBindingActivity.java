@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * Created by daltomare on 12/07/15.
+ * Project: AndroidDataBindingSample
  */
 public class ObservableBindingActivity extends BaseActivity {
     private List<Movie> movies = new ArrayList<>();

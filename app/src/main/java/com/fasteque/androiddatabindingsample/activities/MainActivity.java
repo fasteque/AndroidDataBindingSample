@@ -11,7 +11,8 @@ import android.view.MenuItem;
 import com.fasteque.androiddatabindingsample.R;
 
 /**
- * Created by daltomare on 10/07/15.
+ * Created by daltomare on 12/07/15.
+ * Project: AndroidDataBindingSample
  */
 public class MainActivity extends BaseActivity {
 

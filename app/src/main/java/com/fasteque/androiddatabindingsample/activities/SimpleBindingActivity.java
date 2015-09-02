@@ -10,7 +10,8 @@ import com.fasteque.androiddatabindingsample.databinding.SimpleBinding;
 import com.fasteque.androiddatabindingsample.model.User;
 
 /**
- * Created by daltomare on 08/07/15.
+ * Created by daltomare on 12/07/15.
+ * Project: AndroidDataBindingSample
  */
 public class SimpleBindingActivity extends BaseActivity {
     @Override

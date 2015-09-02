@@ -15,6 +15,7 @@ import java.util.List;
 
 /**
  * Created by daltomare on 12/07/15.
+ * Project: AndroidDataBindingSample
  */
 public class RecyclerViewBindingActivity extends BaseActivity {
 

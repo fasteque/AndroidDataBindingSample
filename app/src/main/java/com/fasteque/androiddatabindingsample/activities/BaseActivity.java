@@ -6,7 +6,8 @@ import android.support.v7.widget.Toolbar;
 import com.fasteque.androiddatabindingsample.R;
 
 /**
- * Created by daltomare on 13/07/15.
+ * Created by daltomare on 12/07/15.
+ * Project: AndroidDataBindingSample
  */
 public abstract class BaseActivity extends AppCompatActivity {
     private Toolbar toolbar;
