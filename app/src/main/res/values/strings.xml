@@ -3,6 +3,7 @@
     <string name="simple_example">Simple</string>
     <string name="observable_example">Observable</string>
     <string name="recyclerview_example">RecyclerView</string>
+    <string name="custom_font_example">Custom font</string>
     <string name="navigation_header_title">Data Binding samples</string>
     <string name="simple_binding_first_name">First name:</string>
     <string name="simple_binding_last_name">Last name:</string>
@@ -12,4 +13,6 @@
     <string name="observable_binding_get_movie_button">Get movie</string>
     <string name="activity_main_text">This is a simple example of the Android Data Binding library.\nOpen the menu to
         find out more.</string>
+    <string name="activity_custom_font">This is a simple example of setting a custom font using the Android Data
+        Binding library.</string>
 </resources>
