@@ -17,6 +17,7 @@
         <activity android:name=".activities.SimpleBindingActivity"/>
         <activity android:name=".activities.ObservableBindingActivity"/>
         <activity android:name=".activities.RecyclerViewBindingActivity"/>
+        <activity android:name=".activities.CustomFontBindingActivity"/>
 
     </application>
 
