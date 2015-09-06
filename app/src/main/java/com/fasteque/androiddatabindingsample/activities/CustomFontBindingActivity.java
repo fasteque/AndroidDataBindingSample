@@ -1,14 +1,12 @@
 package com.fasteque.androiddatabindingsample.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.fasteque.androiddatabindingsample.R;
+import com.fasteque.androiddatabindingsample.utils.FontUtils;
 
 /**
  * Created by daltomare on 12/07/15.
@@ -16,14 +14,13 @@ import com.fasteque.androiddatabindingsample.R;
  */
 public class CustomFontBindingActivity extends BaseActivity {
 
-    private DrawerLayout drawerLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_font);
 
         initToolbar();
+        initText();
     }
 
     @Override
@@ -46,5 +43,10 @@ public class CustomFontBindingActivity extends BaseActivity {
         } else {
             return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void initText() {
+        TextView text = (TextView) findViewById(R.id.custom_font_text);
+        FontUtils.setCustomFont(text, "SourceSansPro-SemiboldItalic.ttf");
     }
 }
