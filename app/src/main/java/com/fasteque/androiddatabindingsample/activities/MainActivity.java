@@ -76,6 +76,9 @@ public class MainActivity extends BaseActivity {
             case R.id.drawer_recycler:
                 startActivity(new Intent(MainActivity.this, RecyclerViewBindingActivity.class));
                 break;
+            case R.id.drawer_custom_font:
+                startActivity(new Intent(MainActivity.this, CustomFontBindingActivity.class));
+                break;
         }
     }
 }
