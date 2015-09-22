@@ -10,10 +10,8 @@ import com.fasteque.androiddatabindingsample.R;
  * Project: AndroidDataBindingSample
  */
 public abstract class BaseActivity extends AppCompatActivity {
-    private Toolbar toolbar;
 
     protected void initToolbar() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
     }
 }
