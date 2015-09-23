@@ -4,6 +4,7 @@ package com.fasteque.androiddatabindingsample.model;
  * Created by daltomare on 12/07/15.
  * Project: AndroidDataBindingSample
  */
+@SuppressWarnings("SameParameterValue")
 public class User {
     private final String firstName;
     private final String lastName;

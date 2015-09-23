@@ -8,6 +8,7 @@ import android.widget.TextView;
  * Created by danielealtomare on 06/09/15.
  * Project: AndroidDataBindingSample
  */
+@SuppressWarnings("SameParameterValue")
 public final class FontUtils {
 
     private FontUtils() {
