@@ -2,6 +2,7 @@ package com.fasteque.androiddatabindingsample.utils;
 
 import android.databinding.BindingAdapter;
 import android.graphics.Typeface;
+import android.support.annotation.NonNull;
 import android.widget.TextView;
 
 /**
@@ -15,7 +16,7 @@ public final class FontUtils {
     }
 
     @BindingAdapter({"bind:customFont"})
-    public static void setCustomFont(TextView textView, String fontName) {
+    public static void setCustomFont(@NonNull TextView textView, @NonNull String fontName) {
         textView.setTypeface(Typeface.createFromAsset(textView.getContext().getAssets(), "fonts/" + fontName));
     }
 }
