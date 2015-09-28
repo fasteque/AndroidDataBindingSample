@@ -9,6 +9,14 @@
         <item name="android:colorAccent">@color/accent</item>
     </style>
 
+    <style name="AppTheme.Base.ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="AppTheme.Base.ActionBar" />
+
     <style name="TextFixed" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@color/primary_text</item>
     </style>
