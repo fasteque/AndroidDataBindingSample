@@ -15,4 +15,5 @@
         find out more.</string>
     <string name="activity_custom_font">This is a simple example of setting a custom font using the Android Data
         Binding library.</string>
+    <string name="action_attributions">Attributions</string>
 </resources>
