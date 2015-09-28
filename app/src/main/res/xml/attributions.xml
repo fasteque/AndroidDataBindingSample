@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/pref_open_source_libs" >
+        <Preference android:title="@string/prefs_robolectric" >
+            <intent android:action="android.intent.action.VIEW"
+                    android:data="https://github.com/robolectric" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
