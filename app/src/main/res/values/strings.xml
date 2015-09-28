@@ -16,4 +16,6 @@
     <string name="activity_custom_font">This is a simple example of setting a custom font using the Android Data
         Binding library.</string>
     <string name="action_attributions">Attributions</string>
+    <string name="pref_open_source_libs">Open Source Libraries</string>
+    <string name="prefs_robolectric">Robolectric</string>
 </resources>
