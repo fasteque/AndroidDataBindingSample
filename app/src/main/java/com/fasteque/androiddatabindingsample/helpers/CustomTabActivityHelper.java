@@ -34,7 +34,6 @@ public class CustomTabActivityHelper {
                                      Uri uri,
                                      CustomTabFallback fallback) {
         String packageName = CustomTabsHelper.getPackageNameToUse(activity);
-        System.out.println("####### packageName: " + packageName);
         //If we cant find a package name, it means there's no browser that supports
         //Chrome Custom Tabs installed. So, we fallback to the webview
         if (packageName == null) {
