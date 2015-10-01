@@ -89,7 +89,13 @@ public class AttributionsActivity extends AppCompatActivity {
     public void openCustomTab(Uri uri) {
         CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
 
-        // TODO: set ActionBar values (color, back button, action item).
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            intentBuilder.setToolbarColor(getResources().getColor(R.color.primary, getTheme()));
+        } else {
+            //noinspection deprecation
+            intentBuilder.setToolbarColor(getResources().getColor(R.color.primary));
+        }
+        intentBuilder.setShowTitle(true);
 
         CustomTabActivityHelper.openCustomTab(this, intentBuilder.build(), uri, new WebviewFallback());
     }
