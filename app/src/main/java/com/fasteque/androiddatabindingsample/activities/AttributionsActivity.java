@@ -14,7 +14,8 @@ import com.fasteque.androiddatabindingsample.fragments.AttributionsFragment;
 import com.fasteque.androiddatabindingsample.helpers.CustomTabActivityHelper;
 import com.fasteque.androiddatabindingsample.helpers.WebviewFallback;
 
-public class AttributionsActivity extends AppCompatActivity {
+public class AttributionsActivity extends AppCompatActivity implements AttributionsFragment
+        .OnPreferenceSelectedListener {
 
     private CustomTabActivityHelper customTabActivityHelper;
 
@@ -85,8 +86,8 @@ public class AttributionsActivity extends AppCompatActivity {
         }
     };
 
-    // TODO: implement an interface or an event, avoid public methods.
-    public void openCustomTab(Uri uri) {
+    @Override
+    public void onPreferenceWithUriSelected(Uri uri) {
         CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
