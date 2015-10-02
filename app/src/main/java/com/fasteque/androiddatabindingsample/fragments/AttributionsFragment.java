@@ -1,5 +1,8 @@
 package com.fasteque.androiddatabindingsample.fragments;
 
+import android.app.Activity;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceFragment;
@@ -13,6 +16,25 @@ import com.fasteque.androiddatabindingsample.activities.AttributionsActivity;
  * Project: AndroidDataBindingSample
  */
 public class AttributionsFragment extends PreferenceFragment {
+
+    OnPreferenceSelectedListener onPreferenceSelectedListener;
+
+    public interface OnPreferenceSelectedListener {
+        void onPreferenceWithUriSelected(Uri uri);
+    }
+
+    @SuppressWarnings("deprecation")
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        try {
+            onPreferenceSelectedListener = (OnPreferenceSelectedListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString() + " must implement OnHeadlineSelectedListener");
+        }
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +44,7 @@ public class AttributionsFragment extends PreferenceFragment {
     @Override
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if(preference.getIntent() != null && preference.getIntent().getData() != null) {
-            ((AttributionsActivity) getActivity()).openCustomTab(preference.getIntent().getData());
+            onPreferenceSelectedListener.onPreferenceWithUriSelected(preference.getIntent().getData());
             return true;
         }
 
