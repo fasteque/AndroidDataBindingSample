@@ -12,7 +12,6 @@ import android.view.Window;
 import com.fasteque.androiddatabindingsample.R;
 import com.fasteque.androiddatabindingsample.fragments.AttributionsFragment;
 import com.fasteque.androiddatabindingsample.helpers.CustomTabActivityHelper;
-import com.fasteque.androiddatabindingsample.helpers.WebviewFallback;
 
 public class AttributionsActivity extends AppCompatActivity implements AttributionsFragment
         .OnPreferenceSelectedListener {
@@ -98,6 +97,6 @@ public class AttributionsActivity extends AppCompatActivity implements Attributi
         }
         intentBuilder.setShowTitle(true);
 
-        CustomTabActivityHelper.openCustomTab(this, intentBuilder.build(), uri, new WebviewFallback());
+        CustomTabActivityHelper.openCustomTab(this, intentBuilder.build(), uri, new WebViewFallback());
     }
 }
