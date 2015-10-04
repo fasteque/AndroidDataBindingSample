@@ -12,6 +12,7 @@ import android.view.Window;
 import com.fasteque.androiddatabindingsample.R;
 import com.fasteque.androiddatabindingsample.fragments.AttributionsFragment;
 import com.fasteque.androiddatabindingsample.helpers.CustomTabActivityHelper;
+import com.fasteque.androiddatabindingsample.helpers.WebViewFallback;
 
 public class AttributionsActivity extends AppCompatActivity implements AttributionsFragment
         .OnPreferenceSelectedListener {
