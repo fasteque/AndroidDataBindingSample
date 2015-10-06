@@ -69,11 +69,11 @@ public class AttributionsActivity extends AppCompatActivity implements Attributi
 
     private void setupCustomTabHelper() {
         customTabActivityHelper = new CustomTabActivityHelper();
-        customTabActivityHelper.setConnectionCallback(mConnectionCallback);
+        customTabActivityHelper.setConnectionCallback(connectionCallback);
     }
 
 
-    private CustomTabActivityHelper.ConnectionCallback mConnectionCallback = new CustomTabActivityHelper
+    private CustomTabActivityHelper.ConnectionCallback connectionCallback = new CustomTabActivityHelper
             .ConnectionCallback() {
         @Override
         public void onCustomTabsConnected() {
