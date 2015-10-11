@@ -24,4 +24,8 @@
     <style name="TextDynamic" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@color/secondary_text</item>
     </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
 </resources>
