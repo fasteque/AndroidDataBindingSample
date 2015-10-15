@@ -15,3 +15,6 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+# Android v7 Support Library
+-keep class android.support.v7.widget.LinearLayoutManager { *; }
