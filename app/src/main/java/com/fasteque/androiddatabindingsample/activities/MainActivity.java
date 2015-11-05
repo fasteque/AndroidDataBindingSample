@@ -23,8 +23,8 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         setTheme(R.style.AppTheme);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         initToolbar();
