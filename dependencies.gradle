@@ -1,0 +1,33 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    // Android
+    androidBuildToolsVersion = "23.0.2"
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 23
+    androidCompileSdkVersion = 23
+
+    // Libraries
+    androidSupportLibraryVersion = '23.1.1'
+
+    // Testing
+    robolectricVersion = '3.0'
+    jUnitVersion = '4.12'
+
+    appDependencies = [
+            appCompat:          "com.android.support:appcompat-v7:${androidSupportLibraryVersion}",
+            design:             "com.android.support:design:${androidSupportLibraryVersion}",
+            recyclerView:       "com.android.support:recyclerview-v7:${androidSupportLibraryVersion}",
+            annotations:        "com.android.support:support-annotations:${androidSupportLibraryVersion}",
+            customTabs:         "com.android.support:customtabs:${androidSupportLibraryVersion}",
+    ]
+
+    appTestDependencies = [
+            robolectric:        "org.robolectric:robolectric:${robolectricVersion}",
+            junit:              "junit:junit:${jUnitVersion}",
+    ]
+}
