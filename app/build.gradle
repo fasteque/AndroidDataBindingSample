@@ -31,15 +31,15 @@ android {
 }
 
 dependencies {
-    def dataDependencies = rootProject.ext.appDependencies
+    def appDependencies = rootProject.ext.appDependencies
     def testDependencies = rootProject.ext.appTestDependencies
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile dataDependencies.appCompat
-    compile dataDependencies.design
-    compile dataDependencies.recyclerView
-    compile dataDependencies.annotations
-    compile dataDependencies.customTabs
+    compile appDependencies.appCompat
+    compile appDependencies.design
+    compile appDependencies.recyclerView
+    compile appDependencies.annotations
+    compile appDependencies.customTabs
 
     testCompile testDependencies.junit
     testCompile testDependencies.robolectric

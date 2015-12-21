@@ -23,11 +23,11 @@ ext {
             design:             "com.android.support:design:${androidSupportLibraryVersion}",
             recyclerView:       "com.android.support:recyclerview-v7:${androidSupportLibraryVersion}",
             annotations:        "com.android.support:support-annotations:${androidSupportLibraryVersion}",
-            customTabs:         "com.android.support:customtabs:${androidSupportLibraryVersion}",
+            customTabs:         "com.android.support:customtabs:${androidSupportLibraryVersion}"
     ]
 
     appTestDependencies = [
             robolectric:        "org.robolectric:robolectric:${robolectricVersion}",
-            junit:              "junit:junit:${jUnitVersion}",
+            junit:              "junit:junit:${jUnitVersion}"
     ]
 }
