@@ -11,7 +11,7 @@ import com.fasteque.androiddatabindingsample.R;
  */
 public abstract class BaseActivity extends AppCompatActivity {
 
-    protected void initToolbar() {
+    void initToolbar() {
         setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
     }
 }
