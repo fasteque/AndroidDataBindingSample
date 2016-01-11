@@ -1,7 +1,6 @@
 package com.fasteque.androiddatabindingsample.fragments;
 
 import android.app.Activity;
-import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.Preference;
@@ -9,7 +8,6 @@ import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 
 import com.fasteque.androiddatabindingsample.R;
-import com.fasteque.androiddatabindingsample.activities.AttributionsActivity;
 
 /**
  * Created by danielealtomare on 28/09/15.
