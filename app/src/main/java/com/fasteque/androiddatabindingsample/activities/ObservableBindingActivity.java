@@ -19,7 +19,7 @@ import java.util.List;
  * Project: AndroidDataBindingSample
  */
 public class ObservableBindingActivity extends BaseActivity {
-    private List<Movie> movies = new ArrayList<>();
+    private final List<Movie> movies = new ArrayList<>();
     private Button getMovieButton;
     private Movie movie;
     private int currentMovie = 0;
