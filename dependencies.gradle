@@ -12,7 +12,7 @@ ext {
     androidCompileSdkVersion = 23
 
     // Libraries
-    androidSupportLibraryVersion = '23.1.1'
+    androidSupportLibraryVersion = '23.2.0'
 
     // Testing
     robolectricVersion = '3.0'
